@@ -1,0 +1,7 @@
+
+spring:
+  application:
+    name: gRpc-server
+grpc:
+  server:
+    port: 50051

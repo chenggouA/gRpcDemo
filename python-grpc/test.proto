@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "org.example";
+option java_multiple_files = false;
+
+service RpcService {
+  rpc SimpleRpc(Req) returns(Resp) {};
+  rpc clientStream(stream Req) returns (Resp) {};
+  rpc serverStream(Req) returns (stream Resp) {};
+  rpc doubleStream(stream Req) returns (stream Resp) {};
+}
+
+message Req {
+  string query = 1;
+}
+
+message Resp {
+  string result = 1;
+}
